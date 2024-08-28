@@ -1,0 +1,12 @@
+/* style goes here */
+:host{
+  display: block;
+}
+
+.statusCompletePill {
+  --pill-background: rgb(0, 255, 0)
+}
+
+.statusInProgressPill{
+  --pill-background: rgb(255, 165, 0)
+}

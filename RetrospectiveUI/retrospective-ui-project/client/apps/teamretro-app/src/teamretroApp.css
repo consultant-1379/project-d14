@@ -1,0 +1,25 @@
+:host{
+  display: block;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 10 10px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+eui-base-v0-textarea{
+  padding: 5px;
+}
+
+eui-v0-icon{
+  margin-right: 3px;
+}
+

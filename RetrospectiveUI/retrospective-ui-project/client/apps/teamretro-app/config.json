@@ -1,0 +1,21 @@
+{
+  "script": "teamretro-app/TeamretroApp",
+  "title": "TEAMRETRO_APP",
+  "route": "teamretro-app",
+  "localePath": "locale/",
+  "menu": {
+    "id": "TEAMRETRO_APP",
+    "data": {
+      "path": "teamretro-app"
+    }
+  },
+  "dependencies": {
+    "@eui/component": "0.10.x",
+    "@eui/lit-component": "0.12.x",
+    "@eui/app": "0.12.x"
+  },
+  "components": {
+    "item-component": "0.12.x"
+  },
+  "subtitle": "SUBTITLE_TEAMRETRO_APP"
+}

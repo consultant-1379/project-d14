@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: group-project-service
+spec:
+  type: NodePort
+  selector:
+    app: group-project
+  ports:
+    - port: 9090
+      targetPort: 9090
+      nodePort: 30009

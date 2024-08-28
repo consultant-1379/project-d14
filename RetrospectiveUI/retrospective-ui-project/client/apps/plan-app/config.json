@@ -1,0 +1,23 @@
+{
+  "script": "plan-app/PlanApp",
+  "title": "PLAN_APP",
+  "route": "plan-app",
+  "localePath": "locale/",
+  "menu": {
+    "id": "PLAN_APP",
+    "data": {
+      "path": "plan-app"
+    }
+  },
+  "dependencies": {
+    "@eui/component": "0.10.x",
+    "@eui/lit-component": "0.12.x",
+    "@eui/app": "0.12.x"
+  },
+  "components": {
+    "progress-visualizer" : "0.12.x",
+    "item-component" : "0.12.x",
+    "task-component" : "0.12.x"
+  },
+  "subtitle": "SUBTITLE_PLAN_APP"
+}

@@ -1,0 +1,49 @@
+:host{
+  display: block;
+}
+
+.simple-counter__remaining {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.simple-counter__titles {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+
+.simple-counter__titles__heading {
+  font-size: 16px;
+}
+
+.simple-counter__titles__subheading {
+  color: var(--light-gray);
+}
+
+.simple-counter__progress {
+  width: var(--todo-percent-complete, 0);
+  height: 8px;
+  background-color: var(--blue);
+  transition: width 0.3s ease-in-out;
+}
+
+.simple-counter__progres__background {
+  margin-top: 4px;
+  width: 100%;
+  height: 8px;
+  background-color: var(--progressbar-background);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 10 10px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}

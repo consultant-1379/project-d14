@@ -1,0 +1,21 @@
+{
+  "script": "retrospective-app/RetrospectiveApp",
+  "title": "RETROSPECTIVE_APP",
+  "route": "retrospective-app",
+  "localePath": "locale/",
+  "menu": {
+    "id": "RETROSPECTIVE_APP",
+    "data": {
+      "path": "retrospective-app"
+    }
+  },
+  "dependencies": {
+    "@eui/component": "0.10.x",
+    "@eui/lit-component": "0.12.x",
+    "@eui/app": "0.12.x"
+  },
+  "components": {
+    "retro-component": "0.10.x"
+  },
+  "subtitle": "SUBTITLE_RETROSPECTIVE_APP"
+}

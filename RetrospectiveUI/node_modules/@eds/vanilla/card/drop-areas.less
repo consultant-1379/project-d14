@@ -1,0 +1,33 @@
+/////////////////////////////////////
+// Drop area
+/////////////////////////////////////
+@import (reference, multiple) "../variables/global";
+
+.drop-area {
+  border: 1px solid @gray;
+  position: relative;
+
+  &.drop-over {
+    border: 2px solid @blue;
+  }
+
+  .empty-state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    &.visible {
+      display: flex;
+    }
+
+    div:not(:first-child) {
+      margin: @space-base 0 0 0;
+    }
+  }
+}

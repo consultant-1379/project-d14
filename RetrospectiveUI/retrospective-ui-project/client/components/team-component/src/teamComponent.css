@@ -1,0 +1,25 @@
+/* style goes here */
+:host{
+  display: block;
+}
+
+eui-layout-v0-card{
+  width: 800px;
+}
+
+eui-base-v0-tree{
+  width: 300px;
+}
+
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  /* width: 90%; */
+  /* padding: 10px; */
+}
+

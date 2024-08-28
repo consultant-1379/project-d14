@@ -1,0 +1,23 @@
+{
+  "script": "teams-app/TeamsApp",
+  "title": "TEAMS_APP",
+  "route": "teams-app",
+  "localePath": "locale/",
+  "menu": {
+    "id": "TEAMS_APP",
+    "data": {
+      "path": "teams-app"
+    }
+  },
+  "dependencies": {
+    "@eui/component": "0.10.x",
+    "@eui/lit-component": "0.12.x",
+    "@eui/app": "0.12.x"
+  },
+  "components": {
+    "item-component": "0.10.x",
+    "team-component": "0.10.x",
+    "person-component": "0.10.x"
+  },
+  "subtitle": "SUBTITLE_TEAMS_APP"
+}

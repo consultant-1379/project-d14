@@ -1,0 +1,11 @@
+:host{
+  display: block;
+}
+
+.row{
+  margin: 5px;
+}
+
+eui-base-v0-tag{
+  padding: 2px;
+}

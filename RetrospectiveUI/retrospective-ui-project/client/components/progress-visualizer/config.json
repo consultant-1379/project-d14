@@ -1,0 +1,8 @@
+{
+  "script":"progress-visualizer/ProgressVisualizer",
+  "id":"ProgressVisualizer",
+  "data": {},
+  "dependencies":{
+    "@eui/lit-component":"0.12.x"
+  }
+}

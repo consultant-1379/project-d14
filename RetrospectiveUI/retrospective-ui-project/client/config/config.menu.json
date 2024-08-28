@@ -1,0 +1,21 @@
+{
+  "app": {
+    "options": {},
+    "menu": {
+      "data": [
+        {
+          "id": "APP_1",
+          "label": "APP_1",
+          "active": true,
+          "data": {
+            "path": "app-1"
+          }
+        },
+        { "id": "TEAMS_APP", "label": "TEAMS_APP", "data": { "path": "teams-app" } },
+        { "id": "RETROSPECTIVE_APP", "label": "RETROSPECTIVE_APP", "data": { "path": "retrospective-app" } },
+        { "id": "TEAMRETRO_APP", "label": "TEAMRETRO_APP", "data": { "path": "teamretro-app" } },
+        { "id": "PLAN_APP", "label": "PLAN_APP", "data": { "path": "plan-app" } }
+      ]
+    }
+  }
+}

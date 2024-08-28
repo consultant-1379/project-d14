@@ -1,0 +1,16 @@
+/* style goes here */
+:host{
+  display: block;
+}
+
+.itemMad {
+  --pill-background: rgb(255, 0, 0)
+}
+
+.itemSad{
+  --pill-background: rgb(255, 127, 0)
+}
+
+.itemGlad{
+  --pill-background: rgb(0, 255, 0)
+}

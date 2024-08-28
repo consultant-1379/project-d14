@@ -1,0 +1,24 @@
+
+.container{
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.fields{
+  position: fixed;
+    top:50%;
+    left: 20%;
+}
+
+eui-base-v0-text-field{
+  padding: 5px;
+}
+
+.button{
+  position: fixed;
+    top:140%;
+    left: 35%; 
+}

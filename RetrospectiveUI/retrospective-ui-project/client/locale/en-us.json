@@ -1,0 +1,12 @@
+{
+  "CONTAINER_TITLE": "Retrospective App",
+  "CONTAINER_TITLE_SHORT": "Retro App",
+  "MENU_TITLE": "Menu",
+  "MENU": {
+    "APP_1": "App One",
+    "TEAMS_APP": "Teams",
+    "RETROSPECTIVE_APP": "Retrospectives",
+    "TEAMRETRO_APP": "Team Retrospective",
+    "PLAN_APP": "Sprint Planner"
+  }
+}

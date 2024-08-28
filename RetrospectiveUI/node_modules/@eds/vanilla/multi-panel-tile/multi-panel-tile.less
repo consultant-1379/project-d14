@@ -1,0 +1,152 @@
+/////////////////////////////////////
+// Multi panel tile
+/////////////////////////////////////
+.multi-panel-tile {
+  @left-panel-width: 200px;
+  @right-panel-width: 300px;
+
+  .separator {
+    opacity: .5;
+    margin: 0 @space-base;
+    border-right: solid 1px @gray;
+  }
+
+  .icon.actionable {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media @mobile {
+    .left-panel {
+      flex: 0 0 100%;
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .right-panel {
+      flex: 0 0 100%;
+      order: -1;
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .mid-panel {
+      flex: 0 0 auto;
+      width: 100%;
+
+      .horizontal-scroll-content {
+        overflow: auto;
+        overflow-y: hidden;
+      }
+
+      &.hidden {
+        display: none;
+      }
+
+      span.separator-sm {
+        padding: 0 4px;
+      }
+    }
+  }
+
+  @media @desktop {
+    .left-panel {
+      flex: 0 0 auto;
+      width: @left-panel-width;
+      padding-right: 16px;
+      border-right: solid 1px rgba(128, 128, 128, .5) !important;
+      animation: showLeftPane 200ms cubic-bezier(.65, .05, .36, 1);
+
+      &.hidden {
+        z-index: -1;
+        margin-right: -(@left-panel-width + 16px);
+        animation: hideLeftPane 200ms cubic-bezier(.65, .05, .36, 1);
+        display: block;
+      }
+
+      &.full-width {
+        flex: 1;
+        border-right-width: 0 !important;
+      }
+
+      @keyframes hideLeftPane {
+        0% { margin-right: 0; }
+        100% { margin-right: -(@left-panel-width + 16px); }
+      }
+
+      @keyframes showLeftPane {
+        0% { margin-right: -(@left-panel-width + 16px); z-index: -1; }
+        100% { margin-right: 0; z-index: -1; }
+      }
+    }
+
+    .mid-panel {
+      flex: 1;
+      min-width: 40%;
+      padding: 0 16px;
+      padding-right: @space-base;
+
+      &.hidden {
+        display: none;
+      }
+
+      .horizontal-scroll-content {
+        overflow: auto;
+        overflow-y: hidden;
+      }
+
+      .top-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+
+        .left {
+          flex: 0 0 auto;
+        }
+
+        .right {
+          flex: 0 0 auto;
+        }
+      }
+    }
+
+    .right-panel {
+      flex: 0 0 auto;
+      width: @right-panel-width;
+      padding-left: 16px;
+      border-left: solid 1px rgba(128, 128, 128, .5) !important;
+      animation: showRightPane 200ms cubic-bezier(.65, .05, .36, 1);
+      z-index: 1;
+      order: 2;
+      margin-left: @space-base;
+
+      &.hidden {
+        margin: 0;
+        z-index: -1;
+        margin-left: -(@right-panel-width + 16px);
+        animation: hideRightPane 200ms cubic-bezier(.65, .05, .36, 1);
+        display: block;
+      }
+
+      &.full-width {
+        flex: 1;
+        border-left-width: 0 !important;
+      }
+
+      @keyframes hideRightPane {
+        0% { margin-left: 0; }
+        100% { margin-left: -(@right-panel-width + 16px); }
+      }
+
+      @keyframes showRightPane {
+        0% { margin-left: -(@right-panel-width + 16px); z-index: -1; }
+        100% { margin-left: 0; z-index: -1; }
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+/////////////////////////////////////
+// Layout - Notification Log
+/////////////////////////////////////
+@import (reference, multiple) "../variables/global";
+
+.notification-log {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &.hidden {
+    display: none;
+  }
+
+  &-trigger.item {
+    background-image: linear-gradient(to left, @blue 50%, transparent 50%);
+    background-size: 210% 100%;
+    padding: 4px 0;
+    border-radius: 14px;
+    transition: background-position .3s .6s ease-in-out,
+      padding .1s .6s ease-in-out;
+    display: inline-block;
+
+    .notification-log-number {
+      opacity: 0;
+      transition: .3s .6s ease-in-out;
+    }
+
+    .icon-notification {
+      display: inline-block;
+      left: 0;
+      top: -1px;
+      margin-right: 0;
+      opacity: .8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .icon-notification-ring {
+      display: inline-block;
+      left: -3px;
+      top: 0;
+      font-size: 0;
+    }
+
+    &.has-notification {
+      background-position: 100%;
+      padding: 4px 6px 4px 16px;
+      opacity: 1;
+
+      .notification-log-number {
+        opacity: 1;
+      }
+
+      .icon-notification {
+        opacity: 1;
+        animation: notification .6s forwards;
+      }
+
+      .icon-notification-ring {
+        animation: ring .6s forwards;
+      }
+    }
+
+    &.no-notification {
+      .icon-notification {
+        animation: notification-reverse .6s forwards;
+      }
+
+      .icon-notification-ring {
+        animation: ring-reverse .6s forwards;
+      }
+    }
+
+    @keyframes ring {
+      0% { font-size: 0; }
+      99% { font-size: 0; transform: scaleX(1); }
+      100% { font-size: 16px; transform: scaleX(-1); }
+    }
+
+    @keyframes notification {
+      0% { transform: rotate(0deg); }
+      10% { transform: rotate(15deg); }
+      50% { transform: rotate(-40deg); }
+
+      99% {
+        transform: rotate(46deg);
+        font-size: 16px;
+        margin-left: 0;
+      }
+
+      100% {
+        transform: rotate(46deg);
+        font-size: 0;
+        margin-left: 12px;
+      }
+    }
+
+    @keyframes ring-reverse {
+      0% { font-size: 16px; transform: scaleX(-1); }
+      1% { font-size: 0; transform: scaleX(1); }
+      100% { font-size: 0; }
+    }
+
+    @keyframes notification-reverse {
+      0% {
+        transform: rotate(46deg);
+        font-size: 0;
+        margin-left: 12px;
+      }
+      1% { transform: rotate(46deg); font-size: 16px; }
+      50% { transform: rotate(-40deg); }
+      90% { transform: rotate(15deg); margin-left: 12px; }
+      100% { transform: rotate(0deg); margin-left: 0; }
+    }
+  }
+
+  &-container {
+    overflow-y: auto;
+    height: 100%;
+    position: relative;
+  }
+
+  &-item {
+    position: relative;
+    margin-right: @space-base;
+    padding: @space-large @space-xxl @space-large @space-xxl;
+    border-bottom: 1px solid @dark-gray;
+
+    &:hover {
+      background-color: fadeout(@white, 90%);
+      cursor: pointer;
+    }
+
+    &.new {
+      &::before {
+        content: "";
+        position: absolute;
+        top: @space-small;
+        left: @space-small;
+        height: calc(100% - @space-base);
+        width: @space-small;
+        background-color: @blue;
+      }
+    }
+
+    .title {
+      font-weight: @weight-medium;
+      margin-bottom: @space-base;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: @space-large;
+    }
+
+    &-time {
+      position: absolute;
+      right: @space-base;
+      top: @space-large;
+      opacity: .8;
+      font-weight: @weight-regular;
+      font-size: 12px;
+      float: right;
+    }
+  }
+
+  &-empty {
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
